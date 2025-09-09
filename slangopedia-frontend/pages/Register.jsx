@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, Link, us
 import axios from 'axios';
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = process.env.VITE_API_BASE_URL;
 
 // Create axios instance
 const api = axios.create({

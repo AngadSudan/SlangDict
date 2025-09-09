@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useAuth } from "../src/context/AuthContext"; 
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = process.env.VITE_API_BASE_URL;
 
 // Create axios instance
 const api = axios.create({
