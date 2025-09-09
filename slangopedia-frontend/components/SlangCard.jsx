@@ -5,7 +5,7 @@ import { Heart, Star, Trash2, Search, Plus, User, LogOut } from 'lucide-react';
 import axios from 'axios';
 
 // API Configuration
-const API_BASE_URL = process.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 // Create axios instance
 const api = axios.create({

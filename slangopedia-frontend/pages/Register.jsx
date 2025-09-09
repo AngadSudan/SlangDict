@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, Link, us
 import axios from 'axios';
 
 // API Configuration
-const API_BASE_URL = process.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 // Create axios instance
 const api = axios.create({
@@ -32,6 +32,7 @@ const Register = () => {
     setError('');
 
     try {
+      console.log(api.API_BASE_URL  )
       await api.post('/auth/register', formData);
       navigate('/login');
     } catch (error) {
