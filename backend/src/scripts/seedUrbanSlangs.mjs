@@ -17,7 +17,7 @@ const slangsFilePath = path.join(__dirname, "/cleanSlangs.json");
 // Seed function
 async function seedSlangs() {
   try {
-    const MONGO_URI = "mongodb+srv://genzadmin:PIVIhVXarTpmCPMh@cluster0.xx154hu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    const MONGO_URI = "process.env.MONGO_URI";
     if (!MONGO_URI) {
       throw new Error("❌ Missing MONGO_URI in .env file");
     }
